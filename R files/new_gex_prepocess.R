@@ -1,16 +1,8 @@
-##setwd("~/Documents/Projects/Saba/DrugRepurposing/code/R")
+
 library(GEOquery)
 library(Biobase)
 library(limma)
 library(stringr)
-
-
-#expdata = read.csv('C:/Users/Saba/Downloads/TRP/DrugRepurposing/Diseases/disease_signatures-v1.0.csv', sep=',', header = T)
-#expid = (expdata$id)
-#geoid = (expdata$geo_id)
-#pertids = (expdata$pert_ids)
-#ctrlids = (expdata$ctrl_ids)
-#show (expid)
 
 
 
@@ -88,6 +80,6 @@ library(stringr)
   
   results = topTable(fit, coef = 'indicator', adjust="BH", number = 1000000)
   
-  write.csv(results, paste0('C:/Users/Saba/Downloads/TRP/DrugRepurposing/Diseases/', experiemtn_id,'.csv')) 
+  write.csv(results, paste0('../Diseases/', experiemtn_id,'.csv')) 
 
 
